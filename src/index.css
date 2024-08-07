@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.terms-wrapper{
+  position: relative;
+  white-space: nowrap;
+}
+.terms-wrapper p{
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  top: -50px;
+  right: 50px;
+}
+.terms-wrapper p.active{
+  visibility: visible;
+}
