@@ -12,11 +12,12 @@ code {
     monospace;
 }
 
-.terms-wrapper{
+.terms-wrapper {
   position: relative;
   white-space: nowrap;
 }
-.terms-wrapper p{
+
+.terms-wrapper p {
   position: absolute;
   background-color: white;
   color: black;
@@ -25,6 +26,15 @@ code {
   top: -50px;
   right: 50px;
 }
-.terms-wrapper p.active{
+
+.terms-wrapper p.active {
   visibility: visible;
+}
+
+.top-card label {
+  cursor: pointer;
+}
+
+.top-card:has(input:checked) {
+  box-shadow: 0 0 15px white;
 }

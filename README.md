@@ -11,6 +11,22 @@
 - https://testing-library.com/docs/queries/about
 (getByRole, getByLabelText, getByPlaceholderText, getByText, getByDisplayValue, getByAltText, getByTitle, getByTestId )
 
+ ### Seçiciler > 3 ana parçadan oluşur
+ 1) Method Tipi 
+ 2) All İfadesi 
+ 3) Seçici Method
+
+ * get > başlangıçta domda olan elemtleri almak için kullanılır | elemnt bulunamazsa test başarısı olur
+
+ * query > elementin ekranda olma durumu kesin olmadığı durumlarda kullanılır get ile bezner çalışır | element bulunamazsa hata vermez null döndürür test devam eder
+
+ * find > elementin ne zaman ekrana basılıcağı belli değise (api isteklerinde) kullanılır
+ * not: find methodu kullanırsak promise döndürdüğünden async await ile kullanmalıyız
+ 
+ * eğer methoda all eklersek seçici koşuluna uyan bütün elemanları getirir
+ * all kullanırsak dönen değer her zaman dizidir 
+
+
 ### HTML Element Rolleri
 - Her HTML elementinini bir rolü vardır, bazılarının etiket ismi ile aynı iken bazıları farklıdır
 - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
