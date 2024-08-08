@@ -38,7 +38,8 @@ const Toppings = () => {
             </label>
             <input
               onChange={(e) => handleChange(e.target.checked, item)}
-              type="checkbox" id={item.name} hidden />
+              type="checkbox" id={item.name}
+               />
           </div>
         ))}
       </div>

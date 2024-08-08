@@ -38,3 +38,6 @@ code {
 .top-card:has(input:checked) {
   box-shadow: 0 0 15px white;
 }
+.top-card input{
+  visibility: hidden;
+}
