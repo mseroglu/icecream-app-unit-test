@@ -19,7 +19,7 @@ import Scoops from "."
 
 test("API den alınan verilerle kartlar ekrana basılır", async () => {
    // renderla
-   render(<Scoops />)
+   await render(<Scoops />)
 
    // elementleri çağır
    const images = await screen.findAllByAltText("dondurma")
