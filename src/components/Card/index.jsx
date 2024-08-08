@@ -1,13 +1,7 @@
 
 
-const Card = ({ item, basket, setBasket }) => {
+const Card = ({ item, addItem, delItem, amount }) => {
 
-   const addItem = () => setBasket([...basket, item])
-
-   const delItem = () => {
-      const filtered = basket.filter(i => i.id !== item.id)
-      setBasket(filtered)
-   }
 
    return (
       <div style={{ width: "200px" }} className="border rounded p-3 d-flex flex-column align-items-center gap-1">
@@ -17,12 +11,12 @@ const Card = ({ item, basket, setBasket }) => {
 
          <div className="d-flex gap-2 mt-4 align-items-center">
             <button
-               onClick={delItem} className="btn btn-sm btn-outline-light">Sıfırla</button>
+               onClick={() => delItem(item.id)} className="btn btn-sm btn-outline-light">Sıfırla</button>
 
-            <span className="fs-2"> {basket.filter(i => i.id === item.id).length} </span>
-            
+            <span data-testid="amount" className="fs-2">{amount}</span>
+
             <button
-               onClick={addItem}
+               onClick={() => addItem(item)}
                className="btn btn-sm btn-outline-info">Ekle</button>
          </div>
       </div>

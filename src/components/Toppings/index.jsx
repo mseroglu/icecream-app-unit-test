@@ -16,20 +16,17 @@ const Toppings = () => {
   const handleChange = (isChecked, item) => {
     isChecked
       ? setBasket([...basket, item])
-      : setBasket(
-        basket.filter(i => i.id !== item.id)
-      )
+      : setBasket(basket.filter(i => i.id !== item.id))
   }
 
 
   return (
     <div>
-
       <h1>SOS Çeşitleri</h1>
 
       <p>Tanesi <span className="text-warning">{price}</span> ₺</p>
       <h3>
-        Sos Ücreti <span data-testid="sos-ucret" className="text-warning">{basket.length*price}</span> ₺
+        Sos Ücreti <span data-testid="sos-ucret" className="text-warning">{basket.length * price}</span> ₺
       </h3>
 
       <div className="d-flex gap-3 flex-wrap justify-content-center">
@@ -41,7 +38,7 @@ const Toppings = () => {
             </label>
             <input
               onChange={(e) => handleChange(e.target.checked, item)}
-              type="checkbox" id={item.name} />
+              type="checkbox" id={item.name} hidden />
           </div>
         ))}
       </div>
